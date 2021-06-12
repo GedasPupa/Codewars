@@ -9,6 +9,7 @@
 ## 6kyu
 
 - [x] Convert string to camel case
+- [ ] Find the missing letter
 
 ## 5kyu
 
