@@ -9,7 +9,8 @@
 ## 6kyu
 
 - [x] Convert string to camel case
-- [ ] Find the missing letter
+- [X] Find the missing letter
+- [x] Simple Fun #243: Perfect Team Of MinimalSize
 
 ## 5kyu
 
