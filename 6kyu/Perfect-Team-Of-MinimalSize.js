@@ -62,16 +62,16 @@
 // let candidates = [[2,3,5,6],[1,3,5,7,9],[0,1,2,3,4,5,6,7,8,9],[0,1,3,5],[1,4,5,7,8,9],[9],[4,7,8],[1,2],[0,1,3,5,8,9]];
 // let candidates = [[0,1],  [1, 3],  [0,2],  [0,5],  [1,4]];
 // let candidates = [[0,2,3,5,6,7],[0,1,2,3,4,5,7],[0,1,5,7],[2],[1,2,3,5,7],[2,3,4,5,7]] ;
-// let candidates = [[0,1,2,4,5,6,7,9],[1,2,3,4,6],[0,1,2,3,4,5,6,7,8,9],[1,2,3,4,5]];
+// let candidates = [[0,1,2,4,5,6,7,9],[1,2,3,4,6],[0,1,3,4,5,6,7,8,9],[1,2,3,4,5]];
 // let candidates = [[1,3,4,5,6,7,8],[0,1,2,3,5,6,7,8,9]];
-// let candidates = [[0,1],[0],[0,1],[0],[0,1],[0,1]];
+// let candidates = [[0,1],[0],[0,1],[],[0,1],[0,1]];
 // let candidates = [[0],[0,1,2,3],[0,1,2,3],[0,1,2,3]] ;
 // let candidates = [[2],[2,5,7],[0,1,2,3,4,5,6,7]] 
-// let candidates = [[1,2,3,4,5],[0,1,2,3,4,5,7],[0,1,3,4,5,6,7]];
+let candidates = [[0],[2,5],[1,2,3,4],[0,1,2,3,4,7],[1,3,4,6,7]];
 // let candidates = [[0],[0],[0],[0],[0]];
 // let candidates = [[0,1,2],[1,2]];
-let n = 7;
-candidates = [[0,2,4],[0,1,6],[0,1,3,4],[0,4],[0,1,3,4,5,6],[0,2,4,5,6]];
+let n = 8;
+// let candidates = [[0,2,4],[0,1,6],[0,1,3,4],[0,4],[0,1,3,4,5,6],[0,2,4,5,6]];
 // let candidates = [[0,1,2,3,4,5,6,7,8,9],[0,3,4,6,7,8],[2,3,5],[0,1,3,4,5,7,8,9],[1,2,7,9],[0,1,5,6,7,9],[0,1,4,6,7,8,9],[0,1,2,3,4,5,6,7,8,9],[0,1,4,6,7,8,9],[3,4,6,7,9]];
 // let n = 10;
 
@@ -102,7 +102,7 @@ function perfectTeamOfMinimalSize(n, candidates) {
   } else {    
     let notUnique = 0;
     for (let m=0; m<teamCandidates.length; m++) {
-      if (bestCandidates[m] !== 0) {
+      // if (bestCandidates[m] !== 0) {
         let filteredCandidates = teamCandidates.filter(can => can !== teamCandidates[m]);
         let filteredCategories = [];
         for (let k=0; k<filteredCandidates.length; k++) {
@@ -119,7 +119,7 @@ function perfectTeamOfMinimalSize(n, candidates) {
             }
           }
         }
-      }
+      // }
     }
     let numb = bestCandidates.filter(cand => cand != 0).length + 1 - notUnique;
     return numb;
