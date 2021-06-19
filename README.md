@@ -4,7 +4,9 @@
 
 **_Instructions and examples commented in every .js file first lines._**
 
-...
+## 7kyu
+
+- [x] Which triangle is that?
 
 ## 6kyu
 
