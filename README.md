@@ -13,7 +13,7 @@
 - [x] Convert string to camel case
 - [X] Find the missing letter
 - [x] Simple Fun #243: Perfect Team Of MinimalSize
-- [ ] Steps in Primes
+- [x] Steps in Primes
 
 ## 5kyu
 

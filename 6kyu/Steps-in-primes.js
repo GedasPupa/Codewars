@@ -30,15 +30,15 @@
 // A "gap" is more restrictive: there must be no primes in between (101-107 is a "step" but not a "gap". Next kata will be about "gaps":-).
 // For Go: nil slice is expected when there are no step between m and n. Example: step(2,4900,4919) --> nil
 
-"use grict";
+"use strict";
 
 let g = 2;
-let m = 100;
-let n = 110;
+let m = 101;
+let n = 103;
 
 function step(g, m, n) {
     const primes = [];
-    while (m<n) {
+    while (m<=n) {
         let prime = true;
         let j=2;
         while (j<m && prime) {
@@ -49,7 +49,7 @@ function step(g, m, n) {
         }
         if (prime)  {
             primes.push(m);
-            // console.log(primes);
+            console.log(primes);
             for (let k=primes.length-2; k>=0; k--) {
                 if (primes[primes.length-1] - primes[k] === g) {
                     return [primes[k], primes[primes.length-1]];
@@ -58,52 +58,9 @@ function step(g, m, n) {
         }
         m++;
     }
-    return [];
+    return null;
 }
 
 console.log(step(g, m, n));
 
-// Basic tests - OK. Problem - Time Out. :(
-// function step(g, m, n) {
-//     const primes = [];
-//     for (let i=m; i<=n; i++) {
-//         let prime = true;
-//         for (let j=2; j<i; j++) {
-//             i % j === 0 && prime ? prime = false : undefined;
-//         }
-//         if (prime)  {
-//             primes.push(i);
-//             for (let k=primes.length-2; k>=0; k--) {
-//                 if (primes[primes.indexOf(i)] - primes[k] === g) {
-//                     return [primes[k], primes[primes.indexOf(i)]];
-//                 }
-//             }
-//         }
-//     };
-//     return [];
-// }
-
-// //Time Out - onkeydown. Problem - Basic Tests???
-// function step(g, m, n) {
-//     const primes = [];
-//     while (m<n) {
-//         let prime = true;
-//         let j=2;
-//         while (j<m && prime) {
-//             if (m%j === 0) {
-//                 prime = false;
-//             }
-//             j++;
-//         }
-//         if (prime)  {
-//             primes.push(m);
-//             for (let k=primes.length-2; k>=0; k--) {
-//                 if (primes[primes.length-1] - primes[k] === g) {
-//                     return [primes[k], primes[primes.length-1]];
-//                 }
-//             }
-//         }
-//         m++;
-//     }
-//     return [];
-// }
+// TESTS OK
