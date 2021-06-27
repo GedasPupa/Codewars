@@ -38,28 +38,47 @@ let n = 103;
 
 function step(g, m, n) {
     const primes = [];
-    while (m<=n) {
+    for (let i=m; i<=n; i++) {
         let prime = true;
-        let j=2;
-        while (j<m && prime) {
-            if (m%j === 0) {
-                prime = false;
-            }
-            j++;
+        for (let j=2; j<i && prime; j++) {
+            i % j === 0 ? prime = false : undefined;
         }
         if (prime)  {
-            primes.push(m);
-            console.log(primes);
+            primes.push(i);
             for (let k=primes.length-2; k>=0; k--) {
                 if (primes[primes.length-1] - primes[k] === g) {
                     return [primes[k], primes[primes.length-1]];
                 }
             }
         }
-        m++;
-    }
+    };
     return null;
 }
+
+// function step(g, m, n) {
+//     const primes = [];
+//     while (m<=n) {
+//         let prime = true;
+//         let j=2;
+//         while (j<m && prime) {
+//             if (m%j === 0) {
+//                 prime = false;
+//             }
+//             j++;
+//         }
+//         if (prime)  {
+//             primes.push(m);
+//             console.log(primes);
+//             for (let k=primes.length-2; k>=0; k--) {
+//                 if (primes[primes.length-1] - primes[k] === g) {
+//                     return [primes[k], primes[primes.length-1]];
+//                 }
+//             }
+//         }
+//         m++;
+//     }
+//     return null;
+// }
 
 console.log(step(g, m, n));
 
