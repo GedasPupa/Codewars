@@ -17,7 +17,7 @@
 
 ## 5kyu
 
-...
+- [x] Moving Zeros To The End
 
 
 ### Codewars - [GedasPupa](https://www.codewars.com/users/GedasPupa)
