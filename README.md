@@ -18,6 +18,7 @@
 ## 5kyu
 
 - [x] Moving Zeros To The End
+- [ ] Going to zero or to Infinity
 
 
 ### Codewars - [GedasPupa](https://www.codewars.com/users/GedasPupa)
