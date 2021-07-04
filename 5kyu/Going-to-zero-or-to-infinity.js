@@ -19,37 +19,151 @@
 // You could try to simplify the expression.
 
 function going(n) {
-    if (n<=160) {
-        let sum = 0;
+    let sum = 0;
+    if (n<160) {
         for (let i=1; i<=n; i++) {
             sum += fact(i); 
         }
         let numb = 1 / fact(n) * sum;
         return Math.floor(numb*1000000)/1000000;
     } else if (n<300) {
-        let bigSum = 0;
         for (let i=1; i<=n; i++) {
             if (i<160) {
-                bigSum += fact(i)/1e308;
+                sum += fact(i)/1e308;
             } else {
-                bigSum += fact(i);
+                sum += fact(i);
             }            
         }
-        let bigNumb = 1 / fact(n) * bigSum;
-        return Math.floor(bigNumb*1000000)/1000000;
-    } else {
-        let biggestSum = 0;
+        let numb = 1 / fact(n) * sum;
+        return Math.floor(numb*1000000)/1000000;
+    } else if (n<421){
         for (let i=1; i<=n; i++) {
             if (i<160) {
-                biggestSum += fact(i)/1e308;
+                sum += fact(i)/1e308;
             } else if (i<300) {
-                biggestSum += fact(i)/1e308;
+                sum += fact(i)/1e308;
             } else {
-                biggestSum += fact(i);
+                sum += fact(i);
             }           
         }
-        let bigestNumb = 1 / fact(n) * biggestSum;
-        return Math.floor(bigestNumb*1000000)/1000000;
+        let numb = 1 / fact(n) * sum;
+        return Math.floor(numb*1000000)/1000000;
+    } else if (n<536) {
+        for (let i=1; i<=n; i++) {
+            if (i<160) {
+                sum += fact(i)/1e308;
+            } else if (i<300) {
+                sum += fact(i)/1e308;
+            } else if (i<421) {
+                sum += fact(i)/1e308;
+            } else {
+                sum += fact(i);
+            }
+        }
+        let numb = 1 / fact(n) * sum;
+        return Math.floor(numb*1000000)/1000000;
+    } else if (n<647) {
+        let sum = 0;
+        for (let i=1; i<=n; i++) {
+            if (i<160) {
+                sum += fact(i)/1e308;
+            } else if (i<300) {
+                sum += fact(i)/1e308;
+            } else if (i<421) {
+                sum += fact(i)/1e308;
+            } else if (i<536) {
+                sum += fact(i)/1e308;
+            } else {
+                sum += fact(i);
+            }
+        }
+        let numb = 1 / fact(n) * sum;
+        return Math.floor(numb*1000000)/1000000;
+    } else if (n<755) {
+        let sum = 0;
+        for (let i=1; i<=n; i++) {
+            if (i<160) {
+                sum += fact(i)/1e308;
+            } else if (i<300) {
+                sum += fact(i)/1e308;
+            } else if (i<421) {
+                sum += fact(i)/1e308;
+            } else if (i<536) {
+                sum += fact(i)/1e308;
+            } else if (i<647) {
+                sum += fact(i)/1e308;
+            } else {
+                sum += fact(i);
+            }
+        }
+        let numb = 1 / fact(n) * sum;
+        return Math.floor(numb*1000000)/1000000;
+    } else if (n<861) {
+        for (let i=1; i<=n; i++) {
+            if (i<160) {
+                sum += fact(i)/1e308;
+            } else if (i<300) {
+                sum += fact(i)/1e308;
+            } else if (i<421) {
+                sum += fact(i)/1e308;
+            } else if (i<536) {
+                sum += fact(i)/1e308;
+            } else if (i<647) {
+                sum += fact(i)/1e308;
+            } else if (i<755) {
+                sum += fact(i)/1e308;
+            } else {
+                sum += fact(i);
+            }
+        }
+        let numb = 1 / fact(n) * sum;
+        return Math.floor(numb*1000000)/1000000;
+    } else if (n<965) {
+        for (let i=1; i<=n; i++) {
+            if (i<160) {
+                sum += fact(i)/1e308;
+            } else if (i<300) {
+                sum += fact(i)/1e308;
+            } else if (i<421) {
+                sum += fact(i)/1e308;
+            } else if (i<536) {
+                sum += fact(i)/1e308;
+            } else if (i<647) {
+                sum += fact(i)/1e308;
+            } else if (i<755) {
+                sum += fact(i)/1e308;
+            } else if (i<861) {
+                sum += fact(i)/1e308;
+            } else {
+                sum += fact(i);
+            }
+        }
+        let numb = 1 / fact(n) * sum;
+        return Math.floor(numb*1000000)/1000000;
+    } else {
+        for (let i=1; i<=n; i++) {
+            if (i<160) {
+                sum += fact(i)/1e308;
+            } else if (i<300) {
+                sum += fact(i)/1e308;
+            } else if (i<421) {
+                sum += fact(i)/1e308;
+            } else if (i<536) {
+                sum += fact(i)/1e308;
+            } else if (i<647) {
+                sum += fact(i)/1e308;
+            } else if (i<755) {
+                sum += fact(i)/1e308;
+            } else if (i<861) {
+                sum += fact(i)/1e308;
+            } else if (i<965) {
+                sum += fact(i)/1e308;
+            } else {
+                sum += fact(i);
+            }
+        }
+        let numb = 1 / fact(n) * sum;
+        return Math.floor(numb*1000000)/1000000;
     }
 }
 
@@ -57,6 +171,12 @@ function fact(n) {
     let fr = 1;
     let once = true;
     let secondOnce = true;
+    let thirdOnce = true;
+    let fourthOnce = true;
+    let fifthOnce = true;
+    let sixthOnce = true;
+    let seventhOnce = true;
+    let eighthOnce = true;
     for (let i=1; i<=n; i++) {
         fr *= i;
         if (i>=160 && once) {
@@ -65,10 +185,27 @@ function fact(n) {
         } else if (i>=300 && secondOnce) {
             fr = fr/1e308;
             secondOnce = false;
+        } else if (i>=421 && thirdOnce) {
+            fr = fr/1e308;
+            thirdOnce = false;
+        } else if (i>=536 && fourthOnce) {
+            fr = fr/1e308;
+            fourthOnce = false;
+        } else if (i>=647 && fifthOnce) {
+            fr = fr/1e308;
+            fifthOnce = false;
+        } else if (i>=755 && sixthOnce) {
+            fr = fr/1e308;
+            sixthOnce = false;
+        } else if (i>=861 && seventhOnce) {
+            fr = fr/1e308;
+            seventhOnce = false;
+        } else if (i>=965 && eighthOnce) {
+            fr = fr/1e308;
+            eighthOnce = false;
         }
     }
     return fr;
 }
 
-console.log(going(421));
-
+console.log(going(1067));
