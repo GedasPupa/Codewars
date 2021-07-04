@@ -26,7 +26,7 @@ function going(n) {
         }
         let numb = 1 / fact(n) * sum;
         return Math.floor(numb*1000000)/1000000;
-    } else {
+    } else if (n<300) {
         let bigSum = 0;
         for (let i=1; i<=n; i++) {
             if (i<160) {
@@ -37,21 +37,38 @@ function going(n) {
         }
         let bigNumb = 1 / fact(n) * bigSum;
         return Math.floor(bigNumb*1000000)/1000000;
+    } else {
+        let biggestSum = 0;
+        for (let i=1; i<=n; i++) {
+            if (i<160) {
+                biggestSum += fact(i)/1e308;
+            } else if (i<300) {
+                biggestSum += fact(i)/1e308;
+            } else {
+                biggestSum += fact(i);
+            }           
+        }
+        let bigestNumb = 1 / fact(n) * biggestSum;
+        return Math.floor(bigestNumb*1000000)/1000000;
     }
 }
 
 function fact(n) {
     let fr = 1;
     let once = true;
+    let secondOnce = true;
     for (let i=1; i<=n; i++) {
         fr *= i;
         if (i>=160 && once) {
         fr = fr/1e308;
         once = false;
+        } else if (i>=300 && secondOnce) {
+            fr = fr/1e308;
+            secondOnce = false;
         }
     }
     return fr;
 }
 
-console.log(going(189));
+console.log(going(421));
 
