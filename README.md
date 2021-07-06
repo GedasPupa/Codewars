@@ -19,6 +19,7 @@
 
 - [x] Moving Zeros To The End
 - [ ] Going to zero or to Infinity
+- [x] Directions reduction
 
 
 ### Codewars - [GedasPupa](https://www.codewars.com/users/GedasPupa)
