@@ -203,4 +203,35 @@ function fact(n) {
     return fr;
 }
 
-console.log(going(1367));
+
+// short version (NOT FINISHED):
+// function going(n) {
+//     let sum = 0;
+//     for (let i=1; i<=n; i++) {
+//         if (i<=170) {
+//         sum += fact(i)/1e308; 
+//         } else {
+//         sum += fact(i);
+//         }
+//     }
+//     let numb = 1 / fact(n) * sum;
+//     return Math.floor(numb*1000000)/1000000;
+// }
+
+// function fact(n) {
+//     let fr = 1;
+//     let fr2 = 1;
+//     for (let i=2; i<=n; i++) {
+//         fr *= i;
+//         fr2 *= i-1;
+//         if (fr >= 1e308) {
+//             // console.log(fr2);
+//             fr = (fr2/1e308) * i;
+//             // console.log(fr);
+
+//             fr2 = fr2/1e308;
+//         }
+//     }
+//     return fr;
+// }
+// console.log(going(1367));

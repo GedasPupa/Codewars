@@ -20,6 +20,7 @@
 - [x] Moving Zeros To The End
 - [ ] Going to zero or to Infinity
 - [x] Directions reduction
+- [x] Perimeter of squares in a rectangle
 
 
 ### Codewars - [GedasPupa](https://www.codewars.com/users/GedasPupa)
