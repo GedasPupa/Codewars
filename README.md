@@ -1,4 +1,6 @@
 ![](https://www.codewars.com/users/GedasPupa/badges/micro)
+[![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
+
 
 # Codewars.com
 
@@ -14,6 +16,8 @@
 - [X] Find the missing letter
 - [x] Simple Fun #243: Perfect Team Of MinimalSize
 - [x] Steps in Primes
+- [x] Counting Duplicates
+- [x] Tortoise racing
 
 ## 5kyu
 
